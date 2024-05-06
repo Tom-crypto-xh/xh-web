@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <link rel="stylesheet" href="./Myinfo.html">
+    <link rel="stylesheet" href="./CSS/Home.css">
+</head>
+<body>
+    <img src="photograph/Homebackgroud.jpg" alt="背景">
+    <div class="d1">
+        <a href="Myinfo.html" class="info">个人信息</a>
+    </div>
+    <div class="d3">
+        <p class="t1">书山有路勤为径 学海无涯苦作舟</p>
+    </div>
+    <div class="d5">
+        <p class="t2">每日一记</p>
+    </div>
+    <div class="d4">
+        <p class="t5">水看似清澈，并非它没有杂质，而是在于懂得沉淀，心看似通透，并非没有杂念，而是在于明白取舍；
+        人生就是一场长跑，输赢得失都是暂时的，从容淡定，张弛有度，才是人生大智慧。
+        </p>
+    </div>
+    <div class="d6">
+        <img src="photograph/picture.jpg" alt="风景图" class="img1">
+    </div>
+    <div class="d7">
+        <p class="t3">今日分享</p>
+    </div>
+    <div class="d8">
+        <p class="t4">欢迎来到我的主页</p>
+    </div>
+    <div class="d9">
+        <div class="d10">
+            <img src="photograph/music-picture.jpg" class="img3" alt="Click to control rotation and audio">
+        </div>
+        <audio id="audioPlayer" src="./music/music.mp3" loop></audio>
+        <a href="https://www.cdut.edu.cn/index.htm"><img src="photograph/CDUT.png" alt="成都理工大学" class="img2"></a>   
+    </div>
+    <script src="./JS/Home.js"></script>
+    <script>
+        var container = document.querySelector('.d10');
+        var image = document.querySelector('.img3');
+        var audioPlayer = document.getElementById('audioPlayer');
+    
+        container.onclick = function() {
+            if (image.style.animationPlayState === 'running') {
+                image.style.animationPlayState = 'paused';
+                audioPlayer.pause();
+            } else {
+                image.style.animationPlayState = 'running';
+                audioPlayer.play();
+            }
+        };
+    </script>
+</body>
+</html>
